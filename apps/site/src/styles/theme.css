@@ -1,0 +1,23 @@
+/* Project-level brand variables */
+:root{
+  --c-bg:#ffffff;
+  --c-text:#0b0b12;
+  --c-primary:#2b72ff;
+  --c-muted:#f2f4f7;
+  --c-card:#ffffff;
+}
+:root[data-theme="dark"]{
+  --c-bg:#0b0b12;
+  --c-text:#ffffff;
+  --c-primary:#6aa2ff;
+  --c-muted:#16181d;
+  --c-card:#0f1016;
+}
+
+/* tiny base styles */
+* { box-sizing:border-box; }
+html, body { height:100%; }
+body { margin:0; background:var(--c-bg); color:var(--c-text); font-family:ui-sans-serif, system-ui; }
+img { max-width:100%; height:auto; }
+a { text-decoration: none; }
+a:focus-visible, button:focus-visible { outline:2px solid currentColor; outline-offset:2px; }

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+import { Hero, Features } from '@starter/ui' 
+
+const map = { hero: Hero, features: Features } as const
+const all = await getCollection('pages')
+const path = Astro.url.pathname || '/'
+const page = all.find(p => p.data.path === path) ?? all.find(p => p.data.path === '/')
+if (!page) throw new Error('No page data found')
+const { sections, title } = page.data
+---
+<BaseLayout title={title}>
+  {sections.map((s) => {
+    const C = map[s.type as keyof typeof map]
+    // @ts-ignore schema guarantees props
+    return <C {...s} />
+  })}
+</BaseLayout>

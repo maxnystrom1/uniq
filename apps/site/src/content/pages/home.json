@@ -1,0 +1,22 @@
+{
+  "title": "Welcome",
+  "path": "/",
+  "sections": [
+    {
+      "type": "hero",
+      "eyebrow": "New",
+      "title": "Ship fast, stay fast",
+      "subtitle": "Neutral sections + brand tokens mean rapid delivery without cookie-cutter design.",
+      "actions": [{ "label": "Get started", "href": "/pricing" }]
+    },
+    {
+      "type": "features",
+      "title": "What you get",
+      "items": [
+        { "title": "Performance", "body": "LCP ≤ 2.5s budgets baked in." },
+        { "title": "Accessibility", "body": "axe 0 serious/critical by default." },
+        { "title": "SEO basics", "body": "Titles, descriptions, OG/Twitter, JSON-LD." }
+      ]
+    }
+  ]
+}

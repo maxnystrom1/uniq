@@ -1,0 +1,22 @@
+---
+import '../styles/global.css'
+import '../styles/theme.css'
+interface Props { title?: string; description?: string }
+const { title='Site', description='Marketing site' } = Astro.props
+---
+
+<html lang="sv-SE">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles/theme.css" />
+  </head>
+  <body>
+    <a class="sr-only focus:not-sr-only focus:p-2" href="#main">Skip to content</a>
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

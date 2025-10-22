@@ -1,0 +1,15 @@
+{
+  "name": "starter-repo",
+  "private": true,
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm -w apps/site run dev",
+    "build": "npm -w apps/site run build",
+    "preview": "npm -w apps/site run preview",
+    "sync": "npm -w apps/site exec astro sync"
+  }
+}
